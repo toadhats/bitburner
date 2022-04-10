@@ -93,7 +93,7 @@ export function createUniqueRandomIp(): string {
 // Saftely add a Server to the AllServers map
 export function AddToAllServers(server: Server | HacknetServer): void {
   if (GetServer(server.hostname)) {
-    console.warn(`Hostname of the server thats being added: ${server.hostname}`);
+    console.warn(`Hostname of the server that's being added: ${server.hostname}`);
     console.warn(`The server that already has this IP is: ${AllServers[server.hostname].hostname}`);
     throw new Error("Error: Trying to add a server with an existing IP");
   }
